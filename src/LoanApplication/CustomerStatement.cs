@@ -25,7 +25,8 @@ namespace LoanApplication
         public CustomerStatement()
         {
             InitializeComponent();
-            loadGroupNames();
+            //loadGroupNames();
+            loadMembers();
         }
 
         private void CustomerStatement_Load(object sender, EventArgs e)
@@ -42,8 +43,9 @@ namespace LoanApplication
                 {
                     #region
                     con.Open(); 
-                    SqlCommand cmd = new SqlCommand("Usp_LoadGroupNames", con); 
+                    SqlCommand cmd = new SqlCommand("Usp_LoadGroup", con); 
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CustomerId", Convert.ToInt32(cbMemberName.SelectedValue));
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt); 
@@ -52,11 +54,11 @@ namespace LoanApplication
                         if (dt.Rows.Count > 0)
                         { 
                             //cbgroupNames.Items.Insert(0, new ListItem("-Select-"));
-                            
+
+                            cbgroupNames.DataSource = dt;
                             cbgroupNames.DisplayMember = "GroupName";
                             cbgroupNames.ValueMember = "GroupId";
-                            cbgroupNames.DataSource = dt;
-                            cbgroupNames.Text = "--Select--";
+                                                     
                         } 
                     }  
                     catch (Exception ex)
@@ -86,9 +88,10 @@ namespace LoanApplication
                 {
                         #region
                         con.Open();
-                        SqlCommand cmd = new SqlCommand("Usp_GetMembersofGroup", con);
+                        SqlCommand cmd = new SqlCommand("Usp_LoadMember", con);
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@GroupId", Convert.ToInt32(cbgroupNames.SelectedValue.ToString()));
+                        //cmd.Parameters.AddWithValue("@CustomerId", Convert.ToInt32(cbgroupNames.SelectedValue.ToString()));
+                        //cmd.Parameters.AddWithValue("@GroupId", Convert.ToInt32(cbgroupNames.SelectedValue.ToString()));
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
@@ -97,9 +100,10 @@ namespace LoanApplication
                         {
                             if (dt.Rows.Count > 0)
                             {
-                                cbMemberName.DataSource = dt;
+                                
                                 cbMemberName.DisplayMember = "Name";
                                 cbMemberName.ValueMember = "CustomerId";
+                                cbMemberName.DataSource = dt;
                             }
                         }
 
@@ -210,18 +214,24 @@ namespace LoanApplication
 
         private void cbgroupNames_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbgroupNames.Text != "SELECT")
+           
+        }
+
+        private void cbMemberName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbMemberName.Text != "SELECT")
             {
                 lblCustMsg.ForeColor = System.Drawing.Color.Green;
-                lblCustMsg.Text = "You are Selected " + cbgroupNames.Text + "Group";
+                lblCustMsg.Text = "You are Selected " + cbMemberName.Text + "Member";
                 if (lblCustMsg.Text != "")
                 {
-                    loadMembers();
+                    //loadMembers();
+                    loadGroupNames();
                 }
                 else
                 {
                     lblCustMsg.ForeColor = System.Drawing.Color.Red;
-                    lblCustMsg.Text = "Please Select Group First";
+                    lblCustMsg.Text = "Please Select member First";
                 }
             }
         }
