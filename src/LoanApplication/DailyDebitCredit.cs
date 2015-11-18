@@ -80,7 +80,7 @@ namespace LoanApplication
 
                     try
                     {
-                        DebitCredit_CrystalReportNew reportDocument = new DebitCredit_CrystalReportNew();
+                        DebitCredit_ReportNew reportDocument = new DebitCredit_ReportNew();
                         ParameterField paramField = new ParameterField();
                         ParameterFields paramFields = new ParameterFields();
                         ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
@@ -96,7 +96,7 @@ namespace LoanApplication
                         DebitandCreditcrystalReport.ParameterFieldInfo = paramFields;
                         
                         //string reportPath = Server.MapPath("~/Memberwisrrptfile.rpt"); 
-                        reportDocument.Load("~/DebitCredit_CrystalReportNew.rpt");
+                        reportDocument.Load("~/DebitCredit_ReportNew.rpt");
                         //reportDocument.Load(@"D:\New folder\Loanapp11sep\10092015 Loan\Loan-25-07-2015\source\LoanApplication\LoanApplication\Memberwisrrptfile.rpt");
                         reportDocument.SetParameterValue("@GroupId", cbgroupNames.SelectedValue.ToString());
               

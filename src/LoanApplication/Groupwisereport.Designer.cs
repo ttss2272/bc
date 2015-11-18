@@ -88,7 +88,6 @@
             this.cbgroupNames.Name = "cbgroupNames";
             this.cbgroupNames.Size = new System.Drawing.Size(246, 28);
             this.cbgroupNames.TabIndex = 46;
-            
             // 
             // label17
             // 

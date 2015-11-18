@@ -16,14 +16,14 @@ namespace LoanApplication {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class PendingPayment : ReportClass {
+    public class DebitCredit_ReportNew : ReportClass {
         
-        public PendingPayment() {
+        public DebitCredit_ReportNew() {
         }
         
         public override string ResourceName {
             get {
-                return "PendingPayment.rpt";
+                return "DebitCredit_ReportNew.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace LoanApplication {
         
         public override string FullResourceName {
             get {
-                return "LoanApplication.PendingPayment.rpt";
+                return "LoanApplication.DebitCredit_ReportNew.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace LoanApplication {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace LoanApplication {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,9 +82,25 @@ namespace LoanApplication {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
             }
         }
         
@@ -95,20 +111,12 @@ namespace LoanApplication {
                 return this.DataDefinition.ParameterFields[0];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CustomerId {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPendingPayment : Component, ICachedReport {
+    public class CachedDebitCredit_ReportNew : Component, ICachedReport {
         
-        public CachedPendingPayment() {
+        public CachedDebitCredit_ReportNew() {
         }
         
         [Browsable(false)]
@@ -145,7 +153,7 @@ namespace LoanApplication {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            PendingPayment rpt = new PendingPayment();
+            DebitCredit_ReportNew rpt = new DebitCredit_ReportNew();
             rpt.Site = this.Site;
             return rpt;
         }

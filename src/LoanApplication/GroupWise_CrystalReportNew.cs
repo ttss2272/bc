@@ -16,14 +16,14 @@ namespace LoanApplication {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class PendingPayment : ReportClass {
+    public class GroupWise_CrystalReportNew : ReportClass {
         
-        public PendingPayment() {
+        public GroupWise_CrystalReportNew() {
         }
         
         public override string ResourceName {
             get {
-                return "PendingPayment.rpt";
+                return "GroupWise_CrystalReportNew.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace LoanApplication {
         
         public override string FullResourceName {
             get {
-                return "LoanApplication.PendingPayment.rpt";
+                return "LoanApplication.GroupWise_CrystalReportNew.rpt";
             }
             set {
                 // Do nothing
@@ -95,20 +95,12 @@ namespace LoanApplication {
                 return this.DataDefinition.ParameterFields[0];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CustomerId {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPendingPayment : Component, ICachedReport {
+    public class CachedGroupWise_CrystalReportNew : Component, ICachedReport {
         
-        public CachedPendingPayment() {
+        public CachedGroupWise_CrystalReportNew() {
         }
         
         [Browsable(false)]
@@ -145,7 +137,7 @@ namespace LoanApplication {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            PendingPayment rpt = new PendingPayment();
+            GroupWise_CrystalReportNew rpt = new GroupWise_CrystalReportNew();
             rpt.Site = this.Site;
             return rpt;
         }
