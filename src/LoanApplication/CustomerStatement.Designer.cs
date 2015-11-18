@@ -39,7 +39,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.cachedPendingPayment11 = new LoanApplication.CachedPendingPayment1();
+            this.cachedPendingPayment11 = new LoanApplication.CachedPendingPayment();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label label1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label lblCustMsg;
-        private CachedPendingPayment1 cachedPendingPayment11;
+        private CachedPendingPayment cachedPendingPayment11;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
