@@ -416,14 +416,16 @@ namespace LoanApplication
                 MessageBox.Show("Address Can Not be Empty..");
                 return false;
             }
-           
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtbankName.Text, "^[a-zA-Z]"))
+            if (txtbankName.Text != "")
             {
-                MessageBox.Show("Bank Name should be only characters");
-                //txtcustomername.Text.Remove(txtcustomername.Text.Length - 1);
-                txtbankName.Text = "";
-                txtbankName.Focus();
-                return false;
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtbankName.Text, "^[a-zA-Z]"))
+                {
+                    MessageBox.Show("Bank Name should be only characters");
+                    //txtcustomername.Text.Remove(txtcustomername.Text.Length - 1);
+                    txtbankName.Text = "";
+                    txtbankName.Focus();
+                    return false;
+                }
             }
             //else if (txtbankName.Text != "" && txtbankAccount.Text == "")
             //{
@@ -433,16 +435,19 @@ namespace LoanApplication
             //    return false;
 
             //}
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtnominee.Text, "^[a-zA-Z]"))
+             if (txtnominee.Text != "")
             {
-                MessageBox.Show("Nominee Name should be only characters");
-                //txtcustomername.Text.Remove(txtcustomername.Text.Length - 1);
-                txtnominee.Text = "";
-                txtnominee.Focus();
-                return false;
-            }
-            
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtnominee.Text, "^[a-zA-Z]"))
+                {
+                    MessageBox.Show("Nominee Name should be only characters");
+                    //txtcustomername.Text.Remove(txtcustomername.Text.Length - 1);
+                    txtnominee.Text = "";
+                    txtnominee.Focus();
+                    return false;
+                }
+                return false;   
 
+            }
             else
             {
                 return true;
