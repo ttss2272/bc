@@ -36,8 +36,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnNew = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -169,8 +167,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label17);
@@ -203,26 +199,6 @@
             this.groupBox2.Size = new System.Drawing.Size(1143, 261);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(719, 178);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 20);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "*";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(720, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 20);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "*";
             // 
             // label19
             // 
@@ -729,8 +705,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox cbselectall;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label4;
     }
 }
 

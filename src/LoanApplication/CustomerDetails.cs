@@ -425,14 +425,14 @@ namespace LoanApplication
                 txtbankName.Focus();
                 return false;
             }
-            else if (txtbankName.Text != "" && txtbankAccount.Text == "")
-            {
+            //else if (txtbankName.Text != "" && txtbankAccount.Text == "")
+            //{
 
-                MessageBox.Show("Please enter Bank Account Number");
-                txtbankName.Focus();
-                return false;
+            //    MessageBox.Show("Please enter Bank Account Number");
+            //    txtbankName.Focus();
+            //    return false;
 
-            }
+            //}
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtnominee.Text, "^[a-zA-Z]"))
             {
                 MessageBox.Show("Nominee Name should be only characters");
