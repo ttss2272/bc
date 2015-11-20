@@ -445,7 +445,7 @@ namespace LoanApplication
                     txtnominee.Focus();
                     return false;
                 }
-                return false;   
+                return true;   
 
             }
             else
