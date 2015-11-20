@@ -27,6 +27,9 @@ namespace LoanApplication
             InitializeComponent();
             //loadGroupNames();
             loadMembers();
+            label17.Visible = false;
+            cbgroupNames.Visible = false;
+
         }
 
         private void CustomerStatement_Load(object sender, EventArgs e)
