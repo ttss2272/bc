@@ -145,7 +145,7 @@ namespace LoanApplication {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            PendingPayment rpt = new PendingPayment();
+            PendingPayment_ReportNew rpt = new PendingPayment_ReportNew();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -225,7 +225,7 @@ namespace LoanApplication
                             //    MessageBox.Show(ex.Message.ToString());
                             //}
                             #endregion
-                            PendingPayment reportDocument = new PendingPayment();
+                            PendingPayment_ReportNew reportDocument = new PendingPayment_ReportNew();
                             ParameterField paramField = new ParameterField();
                             ParameterFields paramFields = new ParameterFields();
                             ParameterDiscreteValue paramDiscreteValue = new ParameterDiscreteValue();
@@ -242,7 +242,7 @@ namespace LoanApplication
 
                             //string reportPath = Server.MapPath("~/Memberwisrrptfile.rpt"); 
                             //reportDocument.Load("~/PendingPayment.rpt");
-                            reportDocument.Load("~/PendingPayment.rpt");
+                            reportDocument.Load("~/PendingPayment_ReportNew.rpt");
                             reportDocument.SetParameterValue("@GroupId", cbGroupName.SelectedValue.ToString());
                             reportDocument.SetParameterValue("@CustomerId", CbcustomerName.SelectedValue.ToString());
                             crystalReportViewer1.ReportSource = reportDocument;
