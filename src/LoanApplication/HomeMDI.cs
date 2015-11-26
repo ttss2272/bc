@@ -64,28 +64,7 @@ namespace LoanApplication
             //    MessageBox.Show(ex.Message.ToString());
             //} 
         }
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            { 
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                } 
-                BCGroupCustomerDetails objgcgroupcustomerDetais = new BCGroupCustomerDetails();
-                objgcgroupcustomerDetais.TopLevel = false;
-                objgcgroupcustomerDetais.StartPosition = FormStartPosition.Manual;
-                objgcgroupcustomerDetais.Left = 100;
-                objgcgroupcustomerDetais.Top = 0;
-                objgcgroupcustomerDetais.Dock = DockStyle.None;
-                panel1.Controls.Add(objgcgroupcustomerDetais);
-                objgcgroupcustomerDetais.Show();
-            }
-            catch (Exception ex)
-            { 
-                MessageBox.Show(ex.Message.ToString());
-            } 
-        }
+       
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -140,198 +119,7 @@ namespace LoanApplication
                 childForm.Close();
             }
         }
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                BCGroupDetails objbcgroupDetails = new BCGroupDetails();
-                objbcgroupDetails.TopLevel = false;
-                objbcgroupDetails.StartPosition = FormStartPosition.Manual;
-                objbcgroupDetails.Left = 300;
-                objbcgroupDetails.Top = 0;
-                objbcgroupDetails.Dock = DockStyle.None;
-                panel1.Controls.Add(objbcgroupDetails);
-                objbcgroupDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            } 
-        }
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                BCConfirmCustomerDetails objbcconfirmcustomerDetails = new BCConfirmCustomerDetails();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.StartPosition = FormStartPosition.Manual;
-                objbcconfirmcustomerDetails.Left = 100;
-                objbcconfirmcustomerDetails.Top = 0;
-                objbcconfirmcustomerDetails.Dock = DockStyle.None;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            } 
-        }
-        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                CustomerGetPaymentDetails objbcconfirmcustomerDetails = new CustomerGetPaymentDetails();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.StartPosition = FormStartPosition.Manual;
-                objbcconfirmcustomerDetails.Left = 100;
-                objbcconfirmcustomerDetails.Top = 0;
-                objbcconfirmcustomerDetails.Dock = DockStyle.None;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            } 
-        }
-        private void printSetupToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                PayToCustomerDetails objbcconfirmcustomerDetails = new PayToCustomerDetails();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.StartPosition = FormStartPosition.Manual;
-                objbcconfirmcustomerDetails.Left = 100;
-                objbcconfirmcustomerDetails.Top = 0;
-                objbcconfirmcustomerDetails.Dock = DockStyle.None;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            
-          
-        }
-        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoanToCustomer objbcschemedetails = new LoanToCustomer();
-            objbcschemedetails.Show();
-        }
-        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GetPayment objpayinstallment = new GetPayment();
-            objpayinstallment.Show();
-        }
-        private void payInstallmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-            PayInstallmentReport objbcconfirmcustomerDetails = new PayInstallmentReport();
-            objbcconfirmcustomerDetails.TopLevel = false;
-            objbcconfirmcustomerDetails.Dock = DockStyle.Fill;
-            panel1.Controls.Add(objbcconfirmcustomerDetails);
-            objbcconfirmcustomerDetails.Show();
-        }
-        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                CustomerReport objbcconfirmcustomerDetails = new CustomerReport();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.Dock = DockStyle.Fill;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            
-        }
-        private void schemeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                SchemeReport objbcconfirmcustomerDetails = new SchemeReport();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.Dock = DockStyle.Fill;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            
-        }
-        private void groupToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                GroupReport objbcconfirmcustomerDetails = new GroupReport();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.Dock = DockStyle.Fill;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            
-        }
-        private void loanDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (Form childForm in MdiChildren)
-                {
-                    childForm.Close();
-                }
-                LoanReport objbcconfirmcustomerDetails = new LoanReport();
-                objbcconfirmcustomerDetails.TopLevel = false;
-                objbcconfirmcustomerDetails.Dock = DockStyle.Fill;
-                panel1.Controls.Add(objbcconfirmcustomerDetails);
-                objbcconfirmcustomerDetails.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-            
-        }
+                                                                     
         private void getInstallmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -380,35 +168,7 @@ namespace LoanApplication
             panel1.Controls.Add(objbcschemedetails);
             objbcschemedetails.Show();
             
-        }
-        private void customerInstallmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-            CustomerInstallmentReport objbcschemedetails = new CustomerInstallmentReport();
-            objbcschemedetails.TopLevel = false;
-            objbcschemedetails.Dock = DockStyle.Fill;
-            panel1.Controls.Add(objbcschemedetails);
-            objbcschemedetails.Show();
-        }
-        private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-           
-            BCConfirmCustomerDetails objbcschemedetails = new BCConfirmCustomerDetails();
-            objbcschemedetails.TopLevel = false;
-            objbcschemedetails.StartPosition = FormStartPosition.Manual;
-            objbcschemedetails.Left = 300;
-            objbcschemedetails.Top = 0;
-            objbcschemedetails.Dock = DockStyle.None;
-            panel1.Controls.Add(objbcschemedetails);
-            objbcschemedetails.Show();
-        }
+        }        
         private void customerStatementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form childForm in MdiChildren)
@@ -471,36 +231,8 @@ namespace LoanApplication
             //     panel1.Controls.Add(objbcschemedetails);
             //     objbcschemedetails.Show();
         }
-        private void customerwiseReportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DailyDebitCredit objddc = new DailyDebitCredit();
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-            objddc.TopLevel = false;
-            objddc.StartPosition = FormStartPosition.Manual;
-            objddc.Left = 10;
-            objddc.Top = 0;
-            objddc.Dock = DockStyle.None;
-            panel1.Controls.Add(objddc);
-            objddc.Show();
-        }
-        private void pendingPaymentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-            PendingPaymentReport objbcschemedetails = new PendingPaymentReport();
-            objbcschemedetails.TopLevel = false;
-            objbcschemedetails.StartPosition = FormStartPosition.Manual;
-            objbcschemedetails.Left = 15;
-            objbcschemedetails.Top = 0;
-            objbcschemedetails.Dock = DockStyle.None;
-            panel1.Controls.Add(objbcschemedetails);
-            objbcschemedetails.Show();
-        }
+        
+        
         private void groupwiseReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Groupwisereport objgroupwisereport = new Groupwisereport();
@@ -587,6 +319,46 @@ namespace LoanApplication
             objprivtelonfrm.Dock = DockStyle.None;
             panel1.Controls.Add(objprivtelonfrm);
             objprivtelonfrm.Show();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Form childForm in MdiChildren)
+                {
+                    childForm.Close();
+                }
+                BCGroupDetails objbcgroupDetails = new BCGroupDetails();
+                objbcgroupDetails.TopLevel = false;
+                objbcgroupDetails.StartPosition = FormStartPosition.Manual;
+                objbcgroupDetails.Left = 300;
+                objbcgroupDetails.Top = 0;
+                objbcgroupDetails.Dock = DockStyle.None;
+                panel1.Controls.Add(objbcgroupDetails);
+                objbcgroupDetails.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            } 
+        }
+
+        private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+
+            BCConfirmCustomerDetails objbcschemedetails = new BCConfirmCustomerDetails();
+            objbcschemedetails.TopLevel = false;
+            objbcschemedetails.StartPosition = FormStartPosition.Manual;
+            objbcschemedetails.Left = 300;
+            objbcschemedetails.Top = 0;
+            objbcschemedetails.Dock = DockStyle.None;
+            panel1.Controls.Add(objbcschemedetails);
+            objbcschemedetails.Show();
         } 
     }
 }
