@@ -12,6 +12,7 @@ using System.Data.Sql;
 using System.Configuration;
 using System.IO;
 using System.Security;
+using LoanApplication.Reports;
 namespace LoanApplication
 {
     public partial class HomeMDI : Form
@@ -414,7 +415,7 @@ namespace LoanApplication
             {
                 childForm.Close();
             }
-            CustomerStatement objbcschemedetails = new CustomerStatement();
+            MemberWiseReport objbcschemedetails = new MemberWiseReport();
             objbcschemedetails.TopLevel = false;
             objbcschemedetails.StartPosition = FormStartPosition.CenterScreen;
             objbcschemedetails.Left = 30;
@@ -430,7 +431,7 @@ namespace LoanApplication
             {
                 childForm.Close();
             }
-            DailyTransaction objbcschemedetails = new DailyTransaction();
+            Datewise_Monthly_Transaction_Report objbcschemedetails = new Datewise_Monthly_Transaction_Report();
             objbcschemedetails.TopLevel = false;
             objbcschemedetails.StartPosition = FormStartPosition.CenterScreen;
             objbcschemedetails.Left = 05;

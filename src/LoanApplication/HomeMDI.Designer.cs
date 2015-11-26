@@ -49,9 +49,7 @@
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerStatementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pendingPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupwiseReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerwiseReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.synchronizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -192,9 +190,7 @@
             this.toolBarToolStripMenuItem,
             this.customerStatementToolStripMenuItem,
             this.dailyTransactionToolStripMenuItem,
-            this.pendingPaymentToolStripMenuItem,
-            this.groupwiseReportToolStripMenuItem,
-            this.customerwiseReportToolStripMenuItem});
+            this.groupwiseReportToolStripMenuItem});
             this.viewMenu.Name = "viewMenu";
             this.viewMenu.Size = new System.Drawing.Size(68, 23);
             this.viewMenu.Text = "Report";
@@ -207,43 +203,29 @@
             this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolBarToolStripMenuItem.Enabled = false;
             this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(280, 24);
             this.toolBarToolStripMenuItem.Text = "Memberwise  ";
             // 
             // customerStatementToolStripMenuItem
             // 
             this.customerStatementToolStripMenuItem.Name = "customerStatementToolStripMenuItem";
-            this.customerStatementToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
+            this.customerStatementToolStripMenuItem.Size = new System.Drawing.Size(280, 24);
             this.customerStatementToolStripMenuItem.Text = "Member Wise Report";
             this.customerStatementToolStripMenuItem.Click += new System.EventHandler(this.customerStatementToolStripMenuItem_Click);
             // 
             // dailyTransactionToolStripMenuItem
             // 
             this.dailyTransactionToolStripMenuItem.Name = "dailyTransactionToolStripMenuItem";
-            this.dailyTransactionToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
+            this.dailyTransactionToolStripMenuItem.Size = new System.Drawing.Size(280, 24);
             this.dailyTransactionToolStripMenuItem.Text = "Datewise Transaction Report";
             this.dailyTransactionToolStripMenuItem.Click += new System.EventHandler(this.dailyTransactionToolStripMenuItem_Click);
-            // 
-            // pendingPaymentToolStripMenuItem
-            // 
-            this.pendingPaymentToolStripMenuItem.Name = "pendingPaymentToolStripMenuItem";
-            this.pendingPaymentToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
-            this.pendingPaymentToolStripMenuItem.Text = "Customer Pending Payment Report";
-            this.pendingPaymentToolStripMenuItem.Click += new System.EventHandler(this.pendingPaymentToolStripMenuItem_Click);
             // 
             // groupwiseReportToolStripMenuItem
             // 
             this.groupwiseReportToolStripMenuItem.Name = "groupwiseReportToolStripMenuItem";
-            this.groupwiseReportToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
-            this.groupwiseReportToolStripMenuItem.Text = "Monthly Installment Report";
+            this.groupwiseReportToolStripMenuItem.Size = new System.Drawing.Size(280, 24);
+            this.groupwiseReportToolStripMenuItem.Text = "Group Wise Report";
             this.groupwiseReportToolStripMenuItem.Click += new System.EventHandler(this.groupwiseReportToolStripMenuItem_Click);
-            // 
-            // customerwiseReportToolStripMenuItem
-            // 
-            this.customerwiseReportToolStripMenuItem.Name = "customerwiseReportToolStripMenuItem";
-            this.customerwiseReportToolStripMenuItem.Size = new System.Drawing.Size(326, 24);
-            this.customerwiseReportToolStripMenuItem.Text = "Daily Credit and Debit Report";
-            this.customerwiseReportToolStripMenuItem.Click += new System.EventHandler(this.customerwiseReportToolStripMenuItem_Click);
             // 
             // synchronizeToolStripMenuItem
             // 
@@ -365,9 +347,7 @@
         private System.Windows.Forms.ToolStripMenuItem bCTransactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dailyTransactionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pendingPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem groupwiseReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerwiseReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem synchronizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transferToolStripMenuItem;
